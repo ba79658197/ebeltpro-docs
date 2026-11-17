@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-BELT PRO — Legal Documents</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+      background: #2e1250;
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      padding: 32px 20px;
+      color: #fff;
+    }
+    .card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      max-width: 460px; width: 100%;
+      padding: 36px 32px;
+    }
+    .logo {
+      text-align: center;
+      font-size: 22px; font-weight: 700; letter-spacing: 2px;
+      background: linear-gradient(90deg, #D8C4FF, #60A5FA);
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 6px;
+    }
+    .sub { text-align: center; font-size: 12px; letter-spacing: 3px; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+    .group { margin-bottom: 22px; }
+    .group h2 { font-size: 15px; font-weight: 600; color: rgba(255,255,255,0.85); margin-bottom: 10px; }
+    .links { display: flex; gap: 10px; }
+    .links a {
+      flex: 1;
+      display: block; text-align: center;
+      padding: 12px 0;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 14px;
+      background: linear-gradient(90deg, #7C3AED, #3B82F6);
+      color: #fff; font-weight: 500;
+      transition: opacity .15s;
+    }
+    .links a:hover { opacity: .85; }
+    .links a.ghost { background: rgba(255,255,255,0.10); font-weight: 400; }
+    .foot { text-align: center; font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 8px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">E-BELT PRO</div>
+    <div class="sub">SMART TRAINING SYSTEM</div>
+
+    <div class="group">
+      <h2 id="t-privacy">Privacy Policy</h2>
+      <div class="links">
+        <a href="PrivacyPolicy_ZH.html" id="l-privacy-zh">中文</a>
+        <a href="PrivacyPolicy_EN.html" id="l-privacy-en">English</a>
+      </div>
+    </div>
+
+    <div class="group">
+      <h2 id="t-terms">Terms of Service</h2>
+      <div class="links">
+        <a href="UserAgreement_ZH.html" id="l-terms-zh">中文</a>
+        <a href="UserAgreement_EN.html" id="l-terms-en">English</a>
+      </div>
+    </div>
+
+    <div class="foot" id="foot">© 2026 E-BELT PRO. All rights reserved.</div>
+  </div>
+
+  <script>
+    // 按浏览器语言本地化目录页标题；正文由用户自行选择
+    (function () {
+      var lang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      var zh = lang.indexOf('zh') === 0 || lang.indexOf('yue') === 0;
+      if (!zh) return;
+      document.title = 'E-BELT PRO — 法律文件';
+      document.getElementById('t-privacy').textContent = '隐私政策';
+      document.getElementById('t-terms').textContent = '用户协议';
+      document.getElementById('foot').textContent = '© 2026 E-BELT PRO. 保留所有权利。';
+    })();
+  </script>
+</body>
+</html>
